@@ -92,15 +92,6 @@ const styles = StyleSheet.create({
   },
   upper: {
     flex: 1,
-<<<<<<< HEAD
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "transparent"
-  },
-  temperature: {
-    fontSize: 48,
-    color: "white"
-=======
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: "transparent"
@@ -110,18 +101,13 @@ const styles = StyleSheet.create({
     backgroundColor: "transparent",
     color: "white",
     marginTop: 10
->>>>>>> final
   },
   lower: {
     flex: 1,
     alignItems: "flex-start",
     justifyContent: "flex-end",
-<<<<<<< HEAD
-    paddingLeft: 25
-=======
     paddingLeft: 25,
     paddingRight: 25
->>>>>>> final
   },
   title: {
     fontSize: 38,
@@ -131,16 +117,9 @@ const styles = StyleSheet.create({
     fontWeight: "300"
   },
   subtitle: {
-<<<<<<< HEAD
-    marginBottom: 100,
-    backgroundColor: "transparent",
-    color: "white",
-    fontSize: 24
-=======
     fontSize: 24,
     backgroundColor: "transparent",
     color: "white",
     marginBottom: 24
->>>>>>> final
   }
 });

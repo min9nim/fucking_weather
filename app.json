@@ -1,20 +1,25 @@
 {
   "expo": {
-    "name": "fucking-weather",
-    "description": "An empty new project",
-    "slug": "fucking-weather",
+    "name": "expo-test",
+    "description": "This project is really great.",
+    "slug": "expo-test",
     "privacy": "public",
-    "sdkVersion": "21.0.0",
+    "sdkVersion": "29.0.0",
+    "platforms": ["ios", "android"],
     "version": "1.0.0",
     "orientation": "portrait",
-    "primaryColor": "#cccccc",
-    "icon": "./assets/icons/app-icon.png",
-    "loading": {
-      "icon": "./assets/icons/loading-icon.png"
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
     },
-    "packagerOpts": {
-      "assetExts": ["ttf", "mp4"]
+    "updates": {
+      "fallbackToCacheTimeout": 0
     },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true
     }

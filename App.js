@@ -1,16 +1,17 @@
-import React, { Component } from "react";
+import React from 'react';
 import { StyleSheet, Text, View, StatusBar } from "react-native";
 import Weather from "./Weather";
 
 const API_KEY = "8042367a40d903407a2eee2c0cfa759a";
 
-export default class App extends Component {
+export default class App extends React.Component {
   state = {
     isLoaded: false,
     error: null,
     temperature: null,
     name: null
   };
+
   componentDidMount() {
     navigator.geolocation.getCurrentPosition(
       position => {
@@ -23,6 +24,7 @@ export default class App extends Component {
       }
     );
   }
+
   _getWeather = (lat, long) => {
     fetch(
       `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&APPID=${API_KEY}`
@@ -34,18 +36,21 @@ export default class App extends Component {
           name: json.weather[0].main,
           isLoaded: true
         });
+        console.log(JSON.stringify(this.state,null,2));
       });
   };
+
   render() {
     const { isLoaded, error, temperature, name } = this.state;
+
     return (
       <View style={styles.container}>
         <StatusBar hidden={true} />
         {isLoaded ? (
           <Weather
-            weatherName={"Mist"}
-            temp={Math.ceil(temperature - 273.15)}
-          />
+          weatherName={"Clear"}
+          temp={Math.ceil(temperature - 273.15)}
+        />
         ) : (
           <View style={styles.loading}>
             <Text style={styles.loadingText}>Getting the fucking weather</Text>
@@ -76,5 +81,11 @@ const styles = StyleSheet.create({
   loadingText: {
     fontSize: 38,
     marginBottom: 24
+  },
+  normalText: {
+    fontSize: 38,
+    paddingBottom: 24,
+    backgroundColor: "#FDF6AA",
+    justifyContent: "flex-end",
   }
 });
