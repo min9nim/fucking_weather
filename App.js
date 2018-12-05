@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View, StatusBar } from "react-native";
 import Weather from "./Weather";
 
-const API_KEY = "8042367a40d903407a2eee2c0cfa759a";
+const API_KEY = "your_key";
 
 export default class App extends React.Component {
   state = {
